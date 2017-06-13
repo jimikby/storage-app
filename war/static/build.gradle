@@ -12,7 +12,7 @@ configurations {
 }
 
 dependencies {
-	staticContent group: 'ccom.akaite.warehouse.client', name: 'webapp', version: property('client.version')
+	staticContent group: 'com.akaite.warehouse.client', name: 'webapp', version: property('client.version')
 }
 
 war {
