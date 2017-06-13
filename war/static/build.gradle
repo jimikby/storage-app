@@ -12,18 +12,17 @@ configurations {
 }
 
 dependencies {
-	staticContent group: 'com.akaite.warehouse.client', name: 'webapp', version: property('client.version')
+	staticContent group: 'com.akaite.warehouse.client', name: 'webapp', version: property('client.version'), ext: 'zip'
 }
 
 war {
 	archiveName = "${archivesBaseName}.war"
 
 	webXml = file('src/resources/web.xml')
-
-	classpath configurations.staticContent
 	
 	webInf {
 		into('config') { from file('src/resources/log4j.xml')}
+		into('webapp') { from {zipTree(configurations.staticContent.asPath)} }
 	}
 }
 
