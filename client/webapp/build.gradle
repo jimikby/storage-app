@@ -1,4 +1,4 @@
-apply plugin: 'java'
+apply plugin: 'distribution'
 
 archivesBaseName = 'webapp'
 
@@ -10,4 +10,22 @@ repositories {
 dependencies {
 }
 
-publishing.publications.modelPublish { from components.java }
+distTar.enabled = false
+
+distributions {
+	main {
+		baseName = archivesBaseName
+	contents {
+		from "build.gradle"
+		}
+	}
+}
+
+publishing.publications {
+	distZip(MavenPublication) {
+		artifactId project.distZip.baseName
+		groupId project.group
+		version project.version
+		artifact project.distZip
+	}
+}

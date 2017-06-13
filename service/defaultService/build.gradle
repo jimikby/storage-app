@@ -10,4 +10,4 @@ repositories {
 dependencies {
 }
 
-publishing.publications.modelPublish { from components.java }
+publishing.publications.servicePublish { from components.java }
