@@ -1,0 +1,34 @@
+apply plugin: 'war'
+archivesBaseName = 'app'
+
+repositories {
+	jcenter()
+	mavenLocal()
+}
+
+configurations { 
+	appLibs
+
+}
+
+dependencies {
+	appLibs group: 'com.akaite.warehouse.model', name: 'entity', version: property('model.version')
+	appLibs group: 'com.akaite.warehouse.persistence', name: 'mongo', version: property('persistence.version')
+	appLibs group: 'com.akaite.warehouse.service', name: 'facade', version: property('service.version')
+	appLibs group: 'com.akaite.warehouse.service', name: 'defaultService', version: property('service.version')
+	appLibs group: 'com.akaite.warehouse.api', name: 'rest', version: property('api.version')
+}
+
+war {
+	archiveName = "${archivesBaseName}.war"
+
+	webXml = file('src/resources/web.xml')
+
+	classpath configurations.appLibs
+	
+	webInf {
+		into('config') { from file('src/resources/log4j.xml')}
+	}
+}
+
+

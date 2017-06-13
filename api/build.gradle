@@ -1,0 +1,14 @@
+apply plugin: 'base'
+
+allprojects {
+	apply plugin: 'maven-publish'
+
+	group = 'com.akaite.warehouse.api'
+	version = property('api.version')
+
+	publishing {
+		publications {
+			modelPublish(MavenPublication)
+		}
+	}
+}

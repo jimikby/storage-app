@@ -1,0 +1,13 @@
+apply plugin: 'java'
+
+archivesBaseName = 'validator'
+
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+dependencies {
+}
+
+publishing.publications.modelPublish { from components.java }

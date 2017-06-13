@@ -1,0 +1,30 @@
+apply plugin: 'war'
+archivesBaseName = 'static'
+
+repositories {
+	jcenter()
+	mavenLocal()
+}
+
+configurations { 
+	staticContent
+
+}
+
+dependencies {
+	staticContent group: 'ccom.akaite.warehouse.client', name: 'webapp', version: property('client.version')
+}
+
+war {
+	archiveName = "${archivesBaseName}.war"
+
+	webXml = file('src/resources/web.xml')
+
+	classpath configurations.staticContent
+	
+	webInf {
+		into('config') { from file('src/resources/log4j.xml')}
+	}
+}
+
+
