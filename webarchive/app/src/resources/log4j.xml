@@ -9,7 +9,7 @@
     <logger name="org">
         <level value="OFF" />
     </logger>
-    <logger name="com.trgr.cobalt.foldering">
+    <logger name="com.akaite.warehouse">
         <level value="DEBUG" />
     </logger>
     <root>
