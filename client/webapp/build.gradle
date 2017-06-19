@@ -16,7 +16,7 @@ distributions {
 	main {
 		baseName = archivesBaseName
 	contents {
-		from "build.gradle"
+		from "distr"
 		}
 	}
 }

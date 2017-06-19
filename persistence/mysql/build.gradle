@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+archivesBaseName = 'mysql'
+
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+dependencies {
+    compile group: 'commons-codec', name: 'commons-codec', version: property('commons-codec.version')
+	compile group: 'com.akaite.warehouse.model', name: 'entity', version: property('model.version')
+}
+
+publishing.publications.persistencePublish { from components.java }

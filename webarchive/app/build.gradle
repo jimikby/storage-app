@@ -13,7 +13,7 @@ configurations {
 
 dependencies {
 	appLibs group: 'com.akaite.warehouse.model', name: 'entity', version: property('model.version')
-	appLibs group: 'com.akaite.warehouse.persistence', name: 'mongo', version: property('persistence.version')
+	appLibs group: 'com.akaite.warehouse.persistence', name: 'mysql', version: property('persistence.version')
 	appLibs group: 'com.akaite.warehouse.service', name: 'facade', version: property('service.version')
 	appLibs group: 'com.akaite.warehouse.service', name: 'defaultService', version: property('service.version')
 	appLibs group: 'com.akaite.warehouse.api', name: 'rest', version: property('api.version')
