@@ -8,6 +8,7 @@ repositories {
 }
 
 dependencies {
+    compile group: 'com.google.guava', name: 'guava', version: property('guava.version')
 }
 
 publishing.publications.modelPublish { from components.java }
