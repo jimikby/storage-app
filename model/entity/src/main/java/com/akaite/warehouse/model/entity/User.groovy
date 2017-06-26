@@ -6,7 +6,7 @@ import groovy.transform.ToString
 @EqualsAndHashCode 
 @ToString(includeNames = true, ignoreNulls = true)
 class User {
-	long uid
+	Long uid
 	String userName
 	String photo_Url
 	String userEmail

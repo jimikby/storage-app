@@ -7,7 +7,7 @@ import groovy.transform.ToString
 @ToString(includeNames = true, ignoreNulls = true)
 class City {
 
-	long uid
+	Long uid
 	Country country
 	String cityName
 

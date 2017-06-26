@@ -7,7 +7,7 @@ import groovy.transform.ToString
 @ToString(includeNames = true, ignoreNulls = true)
 class StoreImage {
 
-    long uid
+    Long uid
     String imageURL
     Store store
 

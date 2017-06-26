@@ -7,7 +7,7 @@ import groovy.transform.ToString
 @ToString(includeNames = true, ignoreNulls = true)
 class Store {
 	
-	long uid
+	Long uid
 	User owner
 	String title
 	int length

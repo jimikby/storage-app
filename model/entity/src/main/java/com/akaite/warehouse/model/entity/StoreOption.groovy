@@ -6,7 +6,7 @@ import groovy.transform.ToString
 @EqualsAndHashCode
 @ToString(includeNames = true, ignoreNulls = true)
 class StoreOption {
-    long uid
+    Long uid
     String name
     Store store
 

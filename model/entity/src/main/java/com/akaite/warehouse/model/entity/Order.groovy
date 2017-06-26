@@ -7,7 +7,7 @@ import groovy.transform.ToString
 @ToString(includeNames = true, ignoreNulls = true)
 class Order {
 
-	long uid
+	Long uid
 	User user
 	Store store
 	Date from

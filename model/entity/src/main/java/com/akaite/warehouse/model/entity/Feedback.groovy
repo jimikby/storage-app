@@ -6,7 +6,7 @@ import groovy.transform.ToString
 @EqualsAndHashCode
 @ToString(includeNames = true, ignoreNulls = true)
 class Feedback {
-    long uid
+    Long uid
     User user
     String message
     User author
