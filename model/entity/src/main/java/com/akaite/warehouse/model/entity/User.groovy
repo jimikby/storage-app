@@ -6,6 +6,7 @@ import groovy.transform.ToString
 @EqualsAndHashCode 
 @ToString(includeNames = true, ignoreNulls = true)
 class User {
+
 	Long uid
 	String userName
 	String photo_Url
@@ -15,7 +16,7 @@ class User {
 	String lastName
 	UserType userType
 	Location location
-	
+
 	User (long id){
 		this.uid = id
 	}
